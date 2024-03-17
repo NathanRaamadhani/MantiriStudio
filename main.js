@@ -1,3 +1,22 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.getElementById('menu-icon');
+    const navList = document.querySelector('.navlist');
+
+    menuIcon.addEventListener('click', function () {
+        navList.classList.toggle('active');
+        // Toggle kelas ikon hamburger dan silang
+        menuIcon.classList.toggle('bx-menu');
+        menuIcon.classList.toggle('bx-x');
+    });
+
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY > 0);
+    });
+});
+
+
+
 let words = document.querySelectorAll(".word");
 let currentWordIndex = 0;
 let currentLetterIndex = 0;
