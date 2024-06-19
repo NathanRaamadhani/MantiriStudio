@@ -1,19 +1,13 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const menuIcon = document.getElementById('menu-icon');
-    const navList = document.querySelector('.navlist');
+    const navlist = document.querySelector('.navlist');
 
-    menuIcon.addEventListener('click', function () {
-        navList.classList.toggle('active');
-        // Toggle kelas ikon hamburger dan silang
-        menuIcon.classList.toggle('bx-menu');
+    menuIcon.addEventListener('click', function() {
+        navlist.classList.toggle('active');
         menuIcon.classList.toggle('bx-x');
     });
-
-    window.addEventListener('scroll', function () {
-        const header = document.querySelector('header');
-        header.classList.toggle('sticky', window.scrollY > 0);
-    });
 });
+
 
 
 
